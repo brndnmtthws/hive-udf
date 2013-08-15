@@ -16,17 +16,11 @@
 package com.nexr.platform.hive.udf;
 
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
 
 import org.apache.hadoop.hive.ql.exec.Description;
 import org.apache.hadoop.hive.ql.exec.UDF;
 import org.apache.hadoop.hive.ql.udf.UDFType;
-import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
-import org.apache.hive.pdk.HivePdkUnitTest;
-import org.apache.hive.pdk.HivePdkUnitTests;
 
 /**
  * UDFStrToBool
