@@ -13,18 +13,18 @@ import org.apache.hadoop.hive.serde2.objectinspector.ListObjectInspector;
 import org.apache.hadoop.hive.serde2.objectinspector.ObjectInspector;
 import org.apache.hadoop.hive.serde2.objectinspector.ObjectInspectorFactory;
 
-@Description(name="array_string_to_int", value="_FUNC_(array<type>) - Converts array of strings to ints")
-public class UDFArrayStringtoInt extends UDF {
+@Description(name="array_string_to_double", value="_FUNC_(array<type>) - Converts array of strings to doubles")
+public class UDFArrayStringtoDouble extends UDF {
     ListObjectInspector arrayInspector;
     ListObjectInspector elementsInspector;
 
-    public List<Integer> evaluate(List<String> a) {
-		List<Integer> ret = new ArrayList<Integer>();
+    public List<Double> evaluate(List<String> a) {
+		List<Double> ret = new ArrayList<Double>();
         if (a == null) return null;
 
 		for (int i = 0; i < a.size(); i++) {
 			try {
-				Integer n = Integer.valueOf(a.get(i).trim());
+				Double n = Double.valueOf(a.get(i).trim());
 				if (n != null) {
 					ret.add(n);
 				}
